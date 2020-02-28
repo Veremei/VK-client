@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Ja-yG-vbB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="fKq-cS-uRb">
+            <objects>
+                <viewController id="4Ja-yG-vbB" customClass="SettingsViewController" customModule="Training_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3e9-3t-YIA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera_400" translatesAutoresizingMaskIntoConstraints="NO" id="0BA-g4-Ql3">
+                                <rect key="frame" x="72.5" y="104" width="269" height="269"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0BA-g4-Ql3" secondAttribute="height" multiplier="1:1" id="KVl-nT-ljP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Профиль" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cwy-Hx-Xmn">
+                                <rect key="frame" x="24" y="393" width="366" height="67"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvQ-ZG-RhF">
+                                <rect key="frame" x="60" y="702" width="294" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="uKd-Sl-aQK"/>
+                                </constraints>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButtonTapped:" destination="4Ja-yG-vbB" eventType="touchUpInside" id="F15-rV-4v1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jxz-It-36i" firstAttribute="trailing" secondItem="nvQ-ZG-RhF" secondAttribute="trailing" constant="60" id="0kw-dn-jab"/>
+                            <constraint firstItem="Jxz-It-36i" firstAttribute="bottom" secondItem="nvQ-ZG-RhF" secondAttribute="bottom" constant="120" id="5Hy-Ax-IRu"/>
+                            <constraint firstItem="Cwy-Hx-Xmn" firstAttribute="top" secondItem="0BA-g4-Ql3" secondAttribute="bottom" constant="20" id="8rK-hE-55J"/>
+                            <constraint firstItem="0BA-g4-Ql3" firstAttribute="top" secondItem="Jxz-It-36i" secondAttribute="top" constant="60" id="Cr6-s2-3Nc"/>
+                            <constraint firstItem="0BA-g4-Ql3" firstAttribute="height" secondItem="3e9-3t-YIA" secondAttribute="height" multiplier="0.3" id="JD7-fZ-wzU"/>
+                            <constraint firstItem="Cwy-Hx-Xmn" firstAttribute="leading" secondItem="Jxz-It-36i" secondAttribute="leading" constant="24" id="M5X-3n-Vsw"/>
+                            <constraint firstItem="Jxz-It-36i" firstAttribute="trailing" secondItem="Cwy-Hx-Xmn" secondAttribute="trailing" constant="24" id="Z7N-Hf-HxG"/>
+                            <constraint firstItem="nvQ-ZG-RhF" firstAttribute="top" relation="lessThanOrEqual" secondItem="Cwy-Hx-Xmn" secondAttribute="bottom" constant="242" id="kRi-pH-m8n"/>
+                            <constraint firstItem="nvQ-ZG-RhF" firstAttribute="centerX" secondItem="3e9-3t-YIA" secondAttribute="centerX" id="mbQ-b0-AJt"/>
+                            <constraint firstItem="0BA-g4-Ql3" firstAttribute="centerX" secondItem="3e9-3t-YIA" secondAttribute="centerX" id="puo-qh-DGv"/>
+                            <constraint firstItem="nvQ-ZG-RhF" firstAttribute="leading" secondItem="Jxz-It-36i" secondAttribute="leading" constant="60" id="tl8-0v-pud"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jxz-It-36i"/>
+                    </view>
+                    <connections>
+                        <outlet property="logoutButton" destination="nvQ-ZG-RhF" id="hY9-Jw-OJl"/>
+                        <outlet property="nameLabel" destination="Cwy-Hx-Xmn" id="sVA-hG-1T0"/>
+                        <outlet property="userImageView" destination="0BA-g4-Ql3" id="bYE-iV-vK0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="93h-ff-sEC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144.92753623188406" y="142.63392857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera_400" width="400" height="400"/>
+    </resources>
+</document>
