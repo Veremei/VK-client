@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Method</key>
+	<dict>
+		<key>User</key>
+		<string>users.get</string>
+		<key>Groups</key>
+		<string>groups.get</string>
+		<key>Wall</key>
+		<string>wall.get</string>
+		<key>Wall post</key>
+		<string>wall.post</string>
+	</dict>
+	<key>API</key>
+	<dict>
+		<key>Base URL</key>
+		<string>https://api.vk.com</string>
+		<key>Auth URL</key>
+		<string>https://oauth.vk.com/authorize</string>
+		<key>App ID</key>
+		<string>7316881</string>
+		<key>Display</key>
+		<string>page</string>
+		<key>Scope</key>
+		<string>friends,groups,wall,offline,photos</string>
+		<key>Redirect URI</key>
+		<string>https://oauth.vk.com/blank.html</string>
+		<key>Response type</key>
+		<string>token</string>
+		<key>Version</key>
+		<string>5.103</string>
+	</dict>
+</dict>
+</plist>

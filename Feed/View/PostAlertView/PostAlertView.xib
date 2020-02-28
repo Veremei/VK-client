@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostAlertView" customModule="Training_Task" customModuleProvider="target">
+            <connections>
+                <outlet property="alertView" destination="iN0-l3-epB" id="fir-vb-Df3"/>
+                <outlet property="messageTextView" destination="h34-ru-ymw" id="O6F-O8-fWS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="283"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h34-ru-ymw">
+                    <rect key="frame" x="8" y="66" width="398" height="201"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="9Ck-Kw-g3P"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GXO-Fs-yGX">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <items>
+                        <barButtonItem systemItem="stop" id="Aho-n2-5fH">
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="dismissButtonTapped:" destination="-1" id="qNg-5L-oLB"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="LyH-xG-scN"/>
+                        <barButtonItem systemItem="action" id="25R-nE-mQj">
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="postButtonTapped:" destination="-1" id="pqy-I9-oFT"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="GXO-Fs-yGX" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="3xG-96-SOR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="h34-ru-ymw" secondAttribute="trailing" constant="8" id="8IO-Qs-Jwq"/>
+                <constraint firstItem="h34-ru-ymw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="f9f-QM-vbM"/>
+                <constraint firstItem="GXO-Fs-yGX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="uYY-px-nTI"/>
+                <constraint firstItem="h34-ru-ymw" firstAttribute="top" secondItem="GXO-Fs-yGX" secondAttribute="bottom" constant="22" id="vZF-Nn-Odr"/>
+                <constraint firstItem="h34-ru-ymw" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wch-7u-LNz"/>
+                <constraint firstItem="GXO-Fs-yGX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="x2Q-OX-2Fo"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="h34-ru-ymw" secondAttribute="bottom" constant="16" id="xW3-DW-AkY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="131.8840579710145" y="323.10267857142856"/>
+        </view>
+    </objects>
+</document>
