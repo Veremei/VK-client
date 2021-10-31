@@ -1,7 +1,5 @@
-# VK-client
-VK api + Auth
-
 VK iOS client:
+- Auth
 - Feed
 - Groups
 - Profile
